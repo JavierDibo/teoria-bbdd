@@ -1,0 +1,678 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Tema 1</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="d791566e-5103-4a89-9cbf-f60091e20870" class="page sans"><header><h1 class="page-title">Tema 1</h1><p class="page-description"></p></header><div class="page-body"><p id="d0bcb30e-6e9b-4f2b-90b4-510d1fd6f619" class="">
+</p><h3 id="547ca9d3-422e-45be-9ade-ece6ba4edf40" class="">Objetivo principal</h3><p id="17b17dbc-a945-47ac-bd5c-89f6bd01a523" class="">Asegurar que la información precisa y consistente esté disponible para los usuarios y para las apliaciones cuando la necesiten y en la forma requerida.</p><h3 id="42d4fb41-99a4-4604-ae98-fb7b56dbc711" class="">Objetivos concretos de un administrador de BD</h3><p id="07a5f483-83f4-4d7e-b0ab-44e6c61b75e6" class="">Garantizar los objetivos de un DBMS:</p><ul id="3299dcf9-243e-4dc8-9eab-a04f48cbf22a" class="bulleted-list"><li style="list-style-type:disc">Seguridad.</li></ul><ul id="b59fdf3c-f026-4eca-b8ff-a2c9c0be069b" class="bulleted-list"><li style="list-style-type:disc">Privacidad.</li></ul><ul id="b2431fde-c1a1-4f87-9904-fa2b496943b7" class="bulleted-list"><li style="list-style-type:disc">Disponibilidad.</li></ul><ul id="8fa24292-7e76-4494-93cc-4cb747148960" class="bulleted-list"><li style="list-style-type:disc">Integridad.</li></ul><ul id="c58eed77-a105-4637-89cc-6696340578c3" class="bulleted-list"><li style="list-style-type:disc">Independencia.</li></ul><ul id="90385a7f-8bdf-4cde-9d0d-9bd7fccb14a0" class="bulleted-list"><li style="list-style-type:disc">Accesos concurrentes.</li></ul><ul id="e60359b4-09e2-4ac0-961d-81e152b64079" class="bulleted-list"><li style="list-style-type:disc">Redundancia de información.</li></ul><ul id="cd4803bf-bde0-4a8f-a86d-ba01f1991182" class="bulleted-list"><li style="list-style-type:disc">Datos distribuídos.</li></ul><h3 id="b25e5867-856b-4aac-8c92-e35fd87b9658" class="">1. Analizar y diseñar la base de datos</h3><ul id="480e898a-765c-4692-bd9b-0ee0915516f4" class="bulleted-list"><li style="list-style-type:disc">Capa física (Menos abstracta)</li></ul><ul id="354d7eac-ee10-49e6-b780-7876ea77af7c" class="bulleted-list"><li style="list-style-type:disc">Capa lógica</li></ul><ul id="cd5b8bcc-4ca9-4c0c-af02-ee30a319fdad" class="bulleted-list"><li style="list-style-type:disc">Capa conceptual</li></ul><ul id="7dba7e76-029d-44cd-8a97-350774737b9c" class="bulleted-list"><li style="list-style-type:disc">Capa de vista o externa (Más abstracta)</li></ul><h3 id="5c29a9b8-6f74-43cb-85c6-d32648627c71" class="">2. Seleccionar un DBMS adecuado y herramientas afines:</h3><ul id="4196388e-6b4c-4fd1-8740-cfdb6b2a50df" class="bulleted-list"><li style="list-style-type:disc">Rendimiento bruto de la BBDD (benchmarks)</li></ul><ul id="8ac7a419-c946-4a0f-9e17-7c419e0485cc" class="bulleted-list"><li style="list-style-type:disc">Facilidades de seguridad</li></ul><ul id="6f261660-0e4a-414a-a419-8f7bdedb76ef" class="bulleted-list"><li style="list-style-type:disc">Integridad de los datos</li></ul><ul id="91154238-0cdb-4a09-aece-3414620ee60d" class="bulleted-list"><li style="list-style-type:disc">Disponibilidad de los datos</li></ul><ul id="14b3479a-1056-455a-b315-ed42299595f5" class="bulleted-list"><li style="list-style-type:disc">Soporte técnico</li></ul><h3 id="d6935a68-ff10-4117-a31c-d03d78ec069c" class="">3. Afinar el rendimiento de la base de datos</h3><p id="bd06007f-a0e0-4d7d-9542-a39ef35581e0" class=""> Una base de datos es un artefacto dinámico:</p><ul id="fa374e9a-344b-4c49-a886-b59419e4183a" class="bulleted-list"><li style="list-style-type:disc">Modelo físico: ¿de qué modo se deben almacenar/acceder los datos?</li></ul><ul id="938b63fd-2b64-49c6-8165-dbe0c3ef23c1" class="bulleted-list"><li style="list-style-type:disc">Modelo lógico: ¿cómo ajustar la bbdd a los nuevos requisitos?</li></ul><h3 id="b85c978b-3803-4ab0-afde-6cfe6aba92d1" class="">4. Mejorar el rendimiento de las consultas</h3><p id="020ecca9-52b8-4a3d-9e0f-638b1fd6b2dc" class="">Más información → más consultas → menos rendimiento</p><ul id="5f8ca459-7cc5-4085-9d37-fa66d7c5959a" class="bulleted-list"><li style="list-style-type:disc">Monitorizar consultas</li></ul><ul id="d3900002-0eee-42dc-a774-401c6035bf70" class="bulleted-list"><li style="list-style-type:disc">Reescribir consultas</li></ul><ul id="08896ffb-8e8c-47ee-83b9-a1fc0331c466" class="bulleted-list"><li style="list-style-type:disc">Modificar el modelo físico de datos</li></ul><h3 id="d4741b9d-7ee3-464b-902f-07a98363b4d4" class="">5. Gestionar la seguridad de los datos, privacidad e integridad</h3><p id="1430a3e3-afea-4ad7-a4b3-ffbcad384c42" class=""><strong><span style="border-bottom:0.05em solid">Seguridad</span></strong>: quien puede acceder a la base de datos</p><p id="1cc0a47d-9e35-4fc7-a4ed-9eb10b459da2" class=""><strong><span style="border-bottom:0.05em solid">Privacidad</span></strong>: protección de mis datos personales</p><p id="30b3dd97-85de-40b2-a6da-e7bd10535f71" class=""><strong><span style="border-bottom:0.05em solid">Integridad</span></strong>: modelo plausible de la realidad</p><p id="5f91a292-1762-452b-a094-f272e08daf88" class=""><strong><span style="border-bottom:0.05em solid">Otras cuestiones</span></strong><strong>:</strong></p><ul id="7fc1d43a-9f44-4c2f-b728-b5011dd7e3b2" class="bulleted-list"><li style="list-style-type:disc">¿mis base de datos es accesible desde internet?</li></ul><ul id="ba637c95-0d17-4a31-9dc6-d0002d91ca45" class="bulleted-list"><li style="list-style-type:disc">¿se trata de una base de datos distribuida?</li></ul><h3 id="bb93b21e-2901-43fc-b27b-2a7f503aef95" class="">6. Diseñar e implementar una política de copias de seguridad</h3><p id="3367dd02-6b16-4ee3-b258-e8b6475ed369" class=""><strong><span style="border-bottom:0.05em solid">Facilidades de backup</span></strong></p><ul id="74c1460b-6abd-4301-a466-deedce54de6f" class="bulleted-list"><li style="list-style-type:disc">¿De qué vamos a realizar copias de seguridad?</li></ul><ul id="f89b1bef-946b-4437-9042-f81cf7849a42" class="bulleted-list"><li style="list-style-type:disc">¿Con qué vamos a realizar la copia?</li></ul><ul id="4391ffb8-d1c8-45cb-a511-6bfb03c01ea6" class="bulleted-list"><li style="list-style-type:disc">¿Cuándo vamos a realizar la copia?</li></ul><ul id="f3b02a7d-3fab-46cc-8675-38a2bbf3df4e" class="bulleted-list"><li style="list-style-type:disc">¿Cómo nos vamos a recuperar de una caída?</li></ul><p id="db90f07b-0034-4344-ad33-83d718d9e28d" class=""><strong><span style="border-bottom:0.05em solid">Gestión de la bitácora</span></strong></p><ul id="20b434df-bd92-42c1-9a36-afcd1d2ddcce" class="bulleted-list"><li style="list-style-type:disc">¿Qué ocurre con las transacciones aun no concluidas o concluidas pero aun no almacenadas</li></ul><ul id="57b57213-583a-43bd-b1a3-db213185b9ed" class="bulleted-list"><li style="list-style-type:disc">¿Cómo recuperarnos de errores menores que no comprometen los archivos de datos?</li></ul><h3 id="6f8e558b-c54b-4921-a80c-c5d9eb900ccd" class="">De las bases de datos hacia las bases de conocimiento</h3><ul id="e841ffeb-2a55-48f6-89c7-3e39cfb5e822" class="bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Dato</span></strong>: una calculadora</li></ul><ul id="c5671857-01e2-452e-ae99-b0df694d6b0b" class="bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Información</span></strong>: una base de datos</li></ul><ul id="75353e77-840d-4d4f-b8a2-1563b8983c5d" class="bulleted-list"><li style="list-style-type:disc"><strong><span style="border-bottom:0.05em solid">Conocimiento</span></strong>: un modelo de conocimiento</li></ul><h3 id="ebe44f3d-48ae-404d-a722-c481ff5f1f4a" class="">Niveles de representacion</h3><figure id="d4dd298c-ddf1-4a97-bc80-fef79339af3b" class="image"><a href="Tema%201%20d791566e51034a899cbff60091e20870/Untitled.png"><img style="width:888px" src="imgs/tema1-1.png"/></a></figure></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
