@@ -1,0 +1,718 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Tema 2</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-transparentGray { background-color: rgba(227, 226, 224, 0); }
+.select-value-color-translucentGray { background-color: rgba(0, 0, 0, 0.06); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="2f92ad51-03c2-44cd-8153-4d6f61188add" class="page sans"><header><h1 class="page-title">Tema 2</h1><p class="page-description"></p></header><div class="page-body"><h1 id="bbb2146b-045c-46d2-8b28-dbfca39fabef" class="">Seguridad en bases de datos</h1><h3 id="f6689be7-5d1c-4cd6-b918-0a86fbd2b7eb" class="">Objetivo</h3><p id="37aab97a-9488-4987-a34e-f178646cc32f" class="">Controlar quién y cómo accede a los datos almacenados</p><h3 id="4055e441-aff6-4c5e-9b79-100007a7f6cd" class="">Requerimientos</h3><ol type="1" id="64fe76ac-d815-44d5-b2a9-657c69f92ba1" class="numbered-list" start="1"><li>Quién puede acceder a la base de datos</li></ol><ol type="1" id="346d531c-342c-4b4f-ba32-fd76e4b53884" class="numbered-list" start="2"><li>A qué datos puede acceder un usuario determinado</li></ol><ol type="1" id="d4e8b716-c3fc-470b-994c-9f1b8634a6e6" class="numbered-list" start="3"><li>Acceso a ciertos valores de un mismo dato (ver tu sueldo pero no el de los compañeros)</li></ol><ol type="1" id="398b4ac8-0e0e-4444-9974-c826657265a0" class="numbered-list" start="4"><li>Qué operaciones se pueden realizar sobre los datos (lectura,modificación o eliminación)</li></ol><ol type="1" id="b9a68208-2afd-4d31-9465-a9a684bb8ec7" class="numbered-list" start="5"><li>Permitir consultas estadísticas pero no consultas de datos concretos</li></ol><ol type="1" id="7defa8b5-b8c2-4a09-abed-3c305c7f4f9f" class="numbered-list" start="6"><li>Los privilegios pueden o no ser transferibles</li></ol><ol type="1" id="40bf48a0-7859-4112-b6fa-f7096cf94f7f" class="numbered-list" start="7"><li>Los accesos pueden restringirse según cuándo o desde dónde se hagan</li></ol><h3 id="27ba8b98-3132-44d0-ab24-cb136eb16075" class="">Mecanismos</h3><ul id="00be123a-b86f-471c-8b73-9666cf3e9574" class="bulleted-list"><li style="list-style-type:disc">Identificación de usuarios</li></ul><ul id="c40fef5f-1b9a-4425-98b8-44c347b9a0c9" class="bulleted-list"><li style="list-style-type:disc">Gestión de privilegios</li></ul><ul id="93eb9037-b858-4d56-9c9f-79ff9ea82942" class="bulleted-list"><li style="list-style-type:disc">Asignacion y control de los recursos de sistema</li></ul><ul id="46f006be-fd07-4f7c-a7db-13a76e5f6a95" class="bulleted-list"><li style="list-style-type:disc">Auditorías</li></ul><hr id="ec5e5fc4-2d4d-4ae2-80cf-bf09bcf2df63"/><h2 id="49bef9ea-20c9-459a-96af-7a6cd0913c1d" class="">Identificación de usuarios</h2><p id="c0411258-bae0-46dd-8da8-3982437a05ff" class="">Para determinar qué privilegios tiene un usuario, antes hay que identificarlo</p><ul id="a3f080bb-4d9a-4cd9-841d-1542c413a586" class="bulleted-list"><li style="list-style-type:disc">Por base de datos o por sistema operativo (autentificación externa)</li></ul><h3 id="2f355b31-3c5b-45af-af7f-45a6f322f2c0" class="">Técnicas de identificacion de usuarios</h3><ul id="67e67543-a281-4612-b89a-debe5049a491" class="bulleted-list"><li style="list-style-type:disc">username + password</li></ul><ul id="57a9df2a-9c19-41ee-b563-54cc4169095d" class="bulleted-list"><li style="list-style-type:disc">identificación por preguntas (útil en aplicaciones de internet)</li></ul><ul id="bdf61ffc-69b3-401e-b3aa-5c4e6b02ae0b" class="bulleted-list"><li style="list-style-type:disc">identificación por tarjetas o llaves<ul id="14a79235-05ad-43fd-a932-7f2b1f684b68" class="bulleted-list"><li style="list-style-type:circle">DNI Electrónico</li></ul><ul id="09f7089c-89b5-453a-81b0-34f38ec1b0af" class="bulleted-list"><li style="list-style-type:circle">Servidor RADIUS</li></ul></li></ul><ul id="021846fe-8409-4083-924d-6521afda6297" class="bulleted-list"><li style="list-style-type:disc">identificación por características físicas<ul id="974ed52d-7ced-4f63-974b-05e9f7a66bf6" class="bulleted-list"><li style="list-style-type:circle">Huella dactilar</li></ul><ul id="5989e223-7a85-41d4-83dd-854e80684e5e" class="bulleted-list"><li style="list-style-type:circle">Iris</li></ul></li></ul><ul id="d79dc9e5-d590-4bb1-a9bc-1c04f7ab0a41" class="bulleted-list"><li style="list-style-type:disc">Determinación de los privilegios</li></ul><ul id="35a07b9c-08d1-4102-97a5-07dba48e4f19" class="bulleted-list"><li style="list-style-type:disc">Estrategia Discretionary Access Control (DAC): cada usuario tiene una lista de privilegios</li></ul><ul id="552da45d-680c-49e9-a74e-11c2a83dfc74" class="bulleted-list"><li style="list-style-type:disc">Estrategia Mandatory Access Control (MAC): cada usuario pertenece a un nivel de prioridad y cada nivel de prioridad tiene asignada una lista de privilegios</li></ul><hr id="5d688002-fbf4-4017-99d8-e7f332e31840"/><h2 id="794ca197-90e2-4f9b-972d-7e3200ce4940" class="">Gestion de privilegios</h2><p id="1f8c805f-db5f-458b-bf09-539d4f87f27b" class=""><strong><span style="border-bottom:0.05em solid">Privilegio</span></strong>: Derecho a ejecutar un tipo determinado de sentencia SQL o a acceder a un objeto de otro usuario. Pueden asignarse a usuarios o, preferiblemente, a <span style="border-bottom:0.05em solid">roles</span></p><ul id="4b247f5d-d35c-4d6f-8fa9-9f3c5ce63b22" class="bulleted-list"><li style="list-style-type:disc">Algunos privilegios pueden ser transferidos y otros no</li></ul><ul id="a1b22914-a5a5-4b43-bcf5-0ada6cfb1ab9" class="bulleted-list"><li style="list-style-type:disc">La concesión de un privilegio a un determinado usuario puede revocarse</li></ul><ul id="69355a4e-6a01-4f93-82bf-9857a0b17c17" class="bulleted-list"><li style="list-style-type:disc">Un mismo privilegio puede haber sido obtenido por concesiones distintas y dado por usuarios distintos</li></ul><ul id="a149962a-116d-46b2-9a59-fad38cd7f277" class="bulleted-list"><li style="list-style-type:disc">Al revocar un privilegio hay que revocar todos aquellos que se deriven de él</li></ul><h3 id="6c0ea52e-42d5-4e3f-b89e-998023172759" class="">Tipos de privielgios en Oracle</h3><ul id="21a72a0e-263a-443c-9759-aa422698a089" class="bulleted-list"><li style="list-style-type:disc">Del <strong><span style="border-bottom:0.05em solid">sistema</span></strong>: qué tipo de cosas podemos hacer sobre la base de datos: conectarnos, crear objetos, administrarla, modificar sesiones de usuario.</li></ul><ul id="d35fd484-d590-491a-b201-2c8a018b9f4b" class="bulleted-list"><li style="list-style-type:disc">De <strong><span style="border-bottom:0.05em solid">objetos</span></strong>: qué sentencias SQL puedo realizar sobre esquemas de usuario.</li></ul><table id="e9a73226-51ce-4c84-bc91-a16c8879063a" class="simple-table"><thead class="simple-table-header"><tr id="53fc6ad7-8400-4b29-b01b-4e0706c719cd"><th id="OdAm" class="simple-table-header-color simple-table-header"><strong>Privilegio Objeto</strong></th><th id="=Yy~" class="simple-table-header-color simple-table-header"><strong>Tabla</strong></th><th id="DlL~" class="simple-table-header-color simple-table-header"><strong>Vista</strong></th><th id="`Wfn" class="simple-table-header-color simple-table-header"><strong>Secuencia</strong></th><th id="zf:[" class="simple-table-header-color simple-table-header"><strong>Procedimiento</strong></th></tr></thead><tbody><tr id="46782666-6ce4-4046-a5b7-1e2cb5f13d20"><th id="OdAm" class="simple-table-header-color simple-table-header">ALTER</th><td id="=Yy~" class="">XXX</td><td id="DlL~" class="">XXX</td><td id="`Wfn" class="">XXX</td><td id="zf:[" class="">XXX</td></tr><tr id="9f0fd44b-7fcd-4c32-a971-4e31fa3c3816"><th id="OdAm" class="simple-table-header-color simple-table-header">DELETE</th><td id="=Yy~" class="">XXX</td><td id="DlL~" class="">XXX</td><td id="`Wfn" class=""></td><td id="zf:[" class=""></td></tr><tr id="e55922ab-a46d-4c29-8a61-50a0d2110856"><th id="OdAm" class="simple-table-header-color simple-table-header">EXECUTE</th><td id="=Yy~" class=""></td><td id="DlL~" class=""></td><td id="`Wfn" class=""></td><td id="zf:[" class="">XXX</td></tr><tr id="d1398a25-a90f-4cd7-be88-07f959c67860"><th id="OdAm" class="simple-table-header-color simple-table-header">INDEX</th><td id="=Yy~" class="">XXX</td><td id="DlL~" class="">XXX</td><td id="`Wfn" class=""></td><td id="zf:[" class=""></td></tr><tr id="ae1f8cdc-d14b-40b7-a068-f5961018cdbb"><th id="OdAm" class="simple-table-header-color simple-table-header">INSERT</th><td id="=Yy~" class="">XXX</td><td id="DlL~" class="">XXX</td><td id="`Wfn" class=""></td><td id="zf:[" class=""></td></tr><tr id="cc701a22-8224-4449-a096-b925a1d188b0"><th id="OdAm" class="simple-table-header-color simple-table-header">REFERENCES</th><td id="=Yy~" class="">XXX</td><td id="DlL~" class=""></td><td id="`Wfn" class=""></td><td id="zf:[" class=""></td></tr><tr id="2f0f690f-c06d-4f2e-9c5b-a991f12ea45a"><th id="OdAm" class="simple-table-header-color simple-table-header">SELECT</th><td id="=Yy~" class="">XXX</td><td id="DlL~" class="">XXX</td><td id="`Wfn" class="">XXX</td><td id="zf:[" class=""></td></tr><tr id="8f1d356b-ea76-4e73-9592-44f02a5a86bc"><th id="OdAm" class="simple-table-header-color simple-table-header">UPDATE</th><td id="=Yy~" class="">XXX</td><td id="DlL~" class="">XXX</td><td id="`Wfn" class=""></td><td id="zf:[" class=""></td></tr></tbody></table><h3 id="119aabfa-fc89-4182-a78c-b96b885f20c5" class="">Gestion de privilegios en Oracle mediante SQL</h3><ul id="1e423f40-1d41-404b-8331-6beeae5f6922" class="bulleted-list"><li style="list-style-type:disc">De sistema:</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="78993519-0f9e-4532-9162-7e3092baa69e" class="code"><code class="language-SQL">
+GRANT system_priv(s) TO {user, | role, |PUBLIC}
+[IDENTIFIED BY password] [WITH ADMIN OPTION];
+REVOKE privilegio ...
+FROM {user | role | PUBLIC} ...;</code></pre><ul id="222622fd-a6d7-42d7-81ce-123800e833f6" class="bulleted-list"><li style="list-style-type:disc">De objeto:</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="8101cd78-7ba2-4d8d-b278-10ca79d6ca7d" class="code"><code class="language-SQL">GRANT privilegio [ (column [, column] ...) ] ...
+ON objeto
+TO {usuario | role | PUBLIC} ...
+[WITH GRANT OPTION];</code></pre><ul id="62437a78-13e4-4b92-9ff5-8d4967cdd080" class="bulleted-list"><li style="list-style-type:disc">Revocar privilegio:</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="923314cf-c655-43ab-bf31-b42a784e94df" class="code"><code class="language-SQL">REVOKE privilegio ...
+ON objeto
+FROM {user | role | PUBLIC} ...
+[CASCADE CONSTRAINT];</code></pre><h3 id="6a7fd2fe-8618-4634-b4f1-f51cc17759b0" class="">Política de transmisión/revocación de privilegios en ORACLE</h3><ul id="737dd4e0-bdb3-4037-8f62-2797a826b99c" class="bulleted-list"><li style="list-style-type:disc">Para perder un privilegio es necesario que lo revoquen todos aquellos que lo dieron.</li></ul><ul id="776cba0a-01dc-4658-a814-3529a5d2060a" class="bulleted-list"><li style="list-style-type:disc">Los privilegios de tipo sistema no se elimina en cascada (hay que revocarlos explícitamente a cada usuario).</li></ul><ul id="0e2d8dee-45af-4099-9bc5-381b9e88ca3a" class="bulleted-list"><li style="list-style-type:disc">Los privilegios de tipo objeto sí se eliminan en cascada, siempre, sin tener en cuenta el momento en que se concedieron.</li></ul><ul id="001ecd8e-5dcf-4a81-99d9-c7073351bd28" class="bulleted-list"><li style="list-style-type:disc">Los privilegios de tipo objeto solo pueden ser revocados por el mismo usuario que los transmitió (<code>with grant option</code>).</li></ul><h3 id="058a2914-fa12-41b8-8259-c4a67e02f458" class="">¿Que es un rol?</h3><p id="006de33d-04c0-41bc-b1cc-a5b0a2070780" class="">Grupo de privilegios, de sistema o sobre objetos, a los que se les da un nombre y pueden ser asignados a otros usuarios y roles.</p><h3 id="11d2f714-33de-46d4-920e-d9ac4722ec41" class="">Gestión de privilegios a través de ROLES</h3><ul id="7ff66f4b-12b7-4e60-adfe-841901d73592" class="bulleted-list"><li style="list-style-type:disc">Pueden otorgarse a cualquier usuario o rol, pero no a si mismo y tampoco de forma circular.</li></ul><ul id="0ef61666-781a-4eb6-8ef5-57fad2a52337" class="bulleted-list"><li style="list-style-type:disc">Pueden tener contraseña.</li></ul><ul id="e0f7ba50-af0b-4934-8b88-03418a12893c" class="bulleted-list"><li style="list-style-type:disc">Su nombre es único en la bd, distinto a cualquier otro nombre de usuario o rol. </li></ul><ul id="ccfdfc5f-cd1d-4bb1-b4bc-9eb7465f51a6" class="bulleted-list"><li style="list-style-type:disc">No pertenecen a ningún esquema.</li></ul><ul id="52d6e0f2-8950-4f42-ba54-81104319978a" class="bulleted-list"><li style="list-style-type:disc">Si un rol cambia automáticamente cambian los privilegios de sus usuarios.</li></ul><ul id="26828f53-6007-4352-951f-389eda4aaf88" class="bulleted-list"><li style="list-style-type:disc">Es posible activar/desactivar temporalmente un rol para un conjunto de usuarios.</li></ul><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="c53d07ed-045c-47fe-8372-1626a6c78730" class="code"><code class="language-SQL">CREATE ROLE nombre_role [IDENTIFIED BY &lt;CONTRASEÑA&gt; | NOT IDENTIFIED];</code></pre><p id="278f2e2c-93e6-438d-8b07-09054626a0f5" class="">Ejemplo real:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e9145d41-204b-4671-a334-0100fac8694a" class="code"><code class="language-SQL">CREATE ROLE Rmecanico;
+CREATE ROLE Radmin;
+GRANT select,insert,update ON trabajo TO Rmecanico;
+GRANT select,insert,update ON mecanico TO Radmin;
+GRANT select,insert,update ON trabajo TO Radmin;
+GRANT Rmecanico TO antonio,lola;
+GRANT Radmin TO luis;
+GRANT select,insert,update ON coche TO Radmin;</code></pre><p id="d40daf93-ae5e-4204-a3ef-4db1443bbf38" class="">
+</p><hr id="56bc7c42-f160-45b7-a399-2570211a1634"/><h2 id="9333c4f2-83c3-43b9-952e-9cf8905c20bf" class="">Asignacion y control de los recursos de sistema</h2><p id="0e960e36-5dfa-4ce6-b422-e3439114485e" class="">Espacio de disco</p><ul id="c145a882-14f2-4676-bbd4-a9ddeb4e9465" class="bulleted-list"><li style="list-style-type:disc">espacio de almacenamiento principal</li></ul><ul id="40cf8718-4124-4c65-ab1e-26a666fc2313" class="bulleted-list"><li style="list-style-type:disc">espacio de almacenamiento temporal</li></ul><ul id="3e73ab61-6ca5-4163-a685-3fd889779c25" class="bulleted-list"><li style="list-style-type:disc">cuotas de disco en cada espacio de almacenamiento</li></ul><p id="0630a42f-95f6-4fd1-83d5-b207d1836df0" class="">Límites de recursos: básico en grandes sistemas multiusuario (recursos caros)</p><ul id="31bfc454-23ac-42c4-a333-5914a082f4d7" class="bulleted-list"><li style="list-style-type:disc">tiempo de CPU: provocado por sentencias SQL, PL/SQL, ...</li></ul><ul id="58267f73-ddf5-4bb0-a4a2-dbc48d2ecb2c" class="bulleted-list"><li style="list-style-type:disc">operaciones de E/S: operación más costosa</li></ul><ul id="c7868a1a-6bcc-49f3-8435-d00cb21fc3f3" class="bulleted-list"><li style="list-style-type:disc">número de sesiones concurrentes</li></ul><ul id="002209b8-0e0b-4243-9391-3780d4360e6c" class="bulleted-list"><li style="list-style-type:disc">tiempo de ocio por sesión</li></ul><ul id="0cc45573-942b-4304-8dd0-998ce18e8312" class="bulleted-list"><li style="list-style-type:disc">tiempo de conexión</li></ul><h3 id="07a5d10b-e2ca-471f-aa93-45d7f0e4cd81" class="">Perfiles de limites de recursos</h3><p id="87c138d9-f04a-4c31-bc20-872730b119cc" class="">Profile: Conjunto, con nombre, de límites de utilización de recursos</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7e453f32-98ad-4bb0-91b8-321a6798f1fe" class="code"><code class="language-SQL">CREATE PROFILE perfil
+LIMIT [SESSIONS_PER_USER {núm_entero | UNLIMITED | DEFAULT}]
+			[CPU_PER_SESSION {núm_entero | UNLIMITED | DEFAULT}]
+			...
+			[PASSWORD_LOCK_TIME {núm_entero | UNLIMITED | DEFAULT}]
+			[PASSWORD_VERIFY_FUNCTION {núm_entero | UNLIMITED | DEFAULT}]</code></pre><h3 id="86d55457-5493-45a0-9d59-05a7a61cb014" class="">Espacio de almacenamiento y cuotas</h3><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="27eb208f-7617-434d-8c1f-1c989c0fdc6b" class="code"><code class="language-SQL">CREATE USER usuario
+IDENTIFIED {BY password | EXTERNALLY}
+[DEFAULT TABLESPACE tablespace]
+[TEMPORARY TABLESPACE tablespace]
+[QUOTA {número_entero [K|M] | UNLIMITED} ON tablespace] ...
+[PROFILE perfil];</code></pre><p id="72dc34de-8300-4be3-a384-7fc39421facb" class="">Ejemplo real:</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="59b53d88-1820-4f8a-b6b4-4af0037ca0b0" class="code"><code class="language-SQL">create profile LIMITED_PROFILE
+limit FAILED_LOGIN_ATTEMPTS 5
+SESSION_PER_USER 2
+CONNECT TIME 30
+IDLE_TIME 5
+create user JANE identified by EYRE
+profile LIMITED_PROFILE;
+grant CREATE SESSION to JANE;</code></pre><hr id="153ead8d-9caf-4316-92c9-ab0a0170c836"/><h2 id="d378a947-210e-4c20-a0dc-f774b1c069bb" class="">Auditorias</h2><p id="73b81679-2827-49d4-b979-86a22a7ee3d3" class="">Consiste en mantener un fichero especial donde el sistema registra de forma automática, toda interacción de los usuarios con la información almacenada en la base de datos</p><h3 id="2f0bf2e5-0e62-42d2-b28b-b82609e3e06c" class="">¿Que auditamos?</h3><ul id="4cfa57b0-c44e-47ef-b5b5-45de36b70a3f" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">usuario</span>: quién accede a los datos</li></ul><ul id="d504205c-2a89-4477-afcb-d2656c3f6b05" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">fecha y hora</span>: cuándo se accedió a los datos</li></ul><ul id="11be898a-0f42-4984-af98-d985d49801b1" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">puesto</span>: desde qué tipo de dispositivo/aplicación</li></ul><ul id="2c253e60-fdbd-41b2-8eed-8c037ea708bc" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">ubicación</span>: desde qué ubicación en la Red</li></ul><ul id="77d66a19-5a38-4b85-8293-8d9dd06c6644" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">operación</span>: cuál fue la sentencia SQL ejecutada</li></ul><ul id="ee8d1849-1eba-4039-b81a-d3a023f40cee" class="bulleted-list"><li style="list-style-type:disc"><span style="border-bottom:0.05em solid">objetos afectados</span>: cuál fue el efecto del acceso a la base de datos</li></ul><h3 id="2eb732e9-7727-4661-a8df-a57d3d7799a6" class="">Tipos de auditorias</h3><p id="7cc8cc58-b74c-4584-88cb-d46ecf957b6d" class="">Los tipos de auditorias son de:</p><ul id="b49a3851-d2e9-4d57-b18f-542941844fdf" class="bulleted-list"><li style="list-style-type:disc">Sentencias</li></ul><ul id="356ba4d5-af51-474a-8b97-498e85c6e4ec" class="bulleted-list"><li style="list-style-type:disc">Privilegios</li></ul><ul id="9abc7bca-130d-4211-982c-d19454c801df" class="bulleted-list"><li style="list-style-type:disc">Esquema</li></ul><ul id="f322fbb4-d5ce-4aec-b526-d2a53521738e" class="bulleted-list"><li style="list-style-type:disc">Grano fino</li></ul><hr id="a99d8d57-a239-4378-8595-0f5993d87dd7"/><h2 id="da9f6c75-fb48-4cfd-bb7f-8ec517ff9f90" class="">Vistas</h2><p id="d6f46ab7-40fb-48a1-87d4-36899d1ec121" class="">Tabla virtual que obtiene sus datos de otra/s tabla/s de la base de datos</p><h3 id="0091e540-fa27-4b0f-b1ed-ebd2b9a4d053" class="">Usos d elas vistas</h3><p id="f36d1e4b-b2c9-40bc-87cd-6b3b6195015e" class="">Principales usos desde el punto de vista de la seguridad:</p><ul id="6dd23cc0-b0a9-43a8-969c-b7f925966900" class="bulleted-list"><li style="list-style-type:disc">Mostrar sólo determinados atributos:<ul id="429f2def-e5fa-4dcf-90c3-85c896aee3e6" class="bulleted-list"><li style="list-style-type:circle">e.g.: No permitir el acceso a los sueldos<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="2fe07474-cc4c-4bdb-a29b-bffec8546f59" class="code"><code class="language-SQL">CREATE VIEW v_mec AS
+SELECT nombre,puesto
+FROM mecanico;</code></pre></li></ul></li></ul><ul id="23a2bd36-1476-4deb-93df-853feb3fc5a0" class="bulleted-list"><li style="list-style-type:disc">Mostrar sólo determinadas tuplas:<ul id="4d7be420-fd4f-40e3-9bd8-9d8b4d8e3ce7" class="bulleted-list"><li style="list-style-type:circle">e.g.: Cada mecánico ve las reparaciones de su puesto<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e416c605-1d14-4f31-b785-96e71ea6a138" class="code"><code class="language-SQL">CREATE VIEW v_trab_chapa AS
+SELECT *
+FROM trabajos
+WHERE DNI IN (SELECT dni FROM mecanico WHERE puesto=‘CHAPA’);</code></pre></li></ul></li></ul><ul id="33e13aa1-bfb7-4cd6-b04b-da78704cb7a5" class="bulleted-list"><li style="list-style-type:disc">Generalmente, los usuarios de la base de datos sólo tienen privilegios sobre determinadas vistas (esquemas externos) y no sobre las tablas reales<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="f225352f-8d0c-44c4-8333-e14e98e943e7" class="code"><code class="language-SQL">GRANT select,insert,update ON v_mec TO Rmecanico;
+GRANT select ON v_trab_chapa TO Rmecanico_chapa;</code></pre><h3 id="874a255d-be8e-485d-9fb5-2fefe23aac02" class="">Diccionario de datos</h3><table id="aa990caa-4c57-4ad6-949d-2c055459df56" class="simple-table"><thead class="simple-table-header"><tr id="edd470b2-2326-4b9f-8c1b-4225fcfe42ef"><th id="_nIJ" class="simple-table-header-color simple-table-header" style="width:308px">Vista</th><th id="xMFu" class="simple-table-header-color simple-table-header" style="width:346px">Objeto</th></tr></thead><tbody><tr id="fad19307-f7b1-4acd-96dc-a5b18001fcf0"><td id="_nIJ" class="" style="width:308px">DBA_PROFILES</td><td id="xMFu" class="" style="width:346px">Perfiles en la base de datos</td></tr><tr id="de8b582c-94af-45d0-bab2-e0e69a5d191e"><td id="_nIJ" class="" style="width:308px">USER_RESOURCE_LIMITS</td><td id="xMFu" class="" style="width:346px">Parámetros de recursos asignados al usuario</td></tr><tr id="8322c57a-cf15-4695-bd5c-8a8f618c6090"><td id="_nIJ" class="" style="width:308px">DBA_ROLES</td><td id="xMFu" class="" style="width:346px">Roles existentes en la base de datos</td></tr><tr id="53303221-f37f-4a11-967f-cda19868864d"><td id="_nIJ" class="" style="width:308px">DBA_USERS<br/>ALL_USERS<br/>USER_USERS<br/></td><td id="xMFu" class="" style="width:346px">Usuarios de la base de dato<br/>Usuarios visibles por el usuario actual<br/>Describe al usuario actual<br/></td></tr><tr id="7f99b575-9a7c-4dbc-8d2c-db4c99f25bf7"><td id="_nIJ" class="" style="width:308px">DBA_ROLE_PRIVS</td><td id="xMFu" class="" style="width:346px">Roles concedidos a usuarios</td></tr><tr id="348dd6e1-1d84-4776-afdf-8d60c5814abd"><td id="_nIJ" class="" style="width:308px">DBA_TAB_PRIVS</td><td id="xMFu" class="" style="width:346px">Permisos sobre objetos de la base de datos</td></tr><tr id="51e3d237-c859-4a41-8a5e-625c05a618dc"><td id="_nIJ" class="" style="width:308px">DBA_SYS_PRIVS</td><td id="xMFu" class="" style="width:346px">Privilegios del sistema a usuarios y roles</td></tr><tr id="c19e93f1-0ef3-4a72-a6b6-04b66576eb2c"><td id="_nIJ" class="" style="width:308px">SYSTEM_PRIVILEGE_MAP</td><td id="xMFu" class="" style="width:346px">Listado de todos los privilegios de sistema</td></tr></tbody></table></li></ul></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
